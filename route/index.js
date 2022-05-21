@@ -1,6 +1,9 @@
 const route = require('express').Router()
+const user = require('./User')
 
-route.get('/testing',(req,res)=>{
+route.use('/user', user)
+
+route.get('/',(req,res)=>{
     res.send('disini server lagi jalan ');
 })
 
